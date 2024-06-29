@@ -1,0 +1,48 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* right: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex; /* Center the modal content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Ensure modal is above other elements */
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease,
+    transform 0.5s ease-in-out; /* Smooth fade in/out animations */
+  overflow: hidden;
+}
+
+/* Image */
+.modal-overlay img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+}
+
+/* Close button */
+.close-button {
+  position: absolute; /* Position close button in top right corner */
+  top: 10px; /* Adjust spacing as needed */
+  right: 10px; /* Adjust spacing as needed */
+  background-color: transparent;
+  border: none;
+  color: #000; /* Black close button color */
+  font-size: 24px; /* Larger font size for easier interaction */
+  cursor: pointer; /* Indicate clickable behavior */
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+.close-button:hover {
+  color: #999; /* Gray color on hover */
+}

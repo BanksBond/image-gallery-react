@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "OrientalCatsLight";
+  src: url("./OrientalCatsLight-2OzB8.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: sans-serif;
+  padding: 30px 0;
+  position: relative;
+  padding: 0;
+}
+
+.header {
+  text-align: center;
+  font-family: "OrientalCatsLight", sans-serif;
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+.container {
+  width: 90%;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item img {
+  width: 100%;
+}
+.item {
+  width: 30%;
+  height: auto;
+}
+/* Styles for the cat card container */
+.cat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between cards */
+  justify-content: center; /* Center the cards */
+  padding: 16px; /* Padding around the grid */
+  margin: 0 auto; /* Center the grid in the page */
+  max-width: 90%; /* Maximum width for the grid */
+}
+
+/* Styles for each cat card */
+.cat-card {
+  position: relative;
+  background-color: #fff; /* White background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  overflow: hidden; /* Hide overflow */
+  width: calc(25% - 16px); /* Flexible width, adjust for gap */
+  max-width: 300px; /* Maximum width for each card */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+  /* padding: 8px; Padding inside the card */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.cat-card:hover {
+  transform: scale(1.01); /* Lift the card on hover */
+}
+
+/* Styles for the cat image */
+.cat-image {
+  width: 100%; /* Full width image */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 4px; /* Rounded corners for image */
+  transition: transform 0.3s ease-in-out;
+}
+
+.cat-image:hover {
+  transform: scale(1.1);
+}
+
+.breed {
+  font-size: large;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px;
+
+  color: #fff;
+}
+
+.b-div {
+  position: absolute;
+
+  border-radius: 20px;
+  background-color: rgb(39, 39, 39);
 }
