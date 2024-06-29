@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/image-gallery-react/static/css/main.9d4edd9e.css",
+    "main.js": "/image-gallery-react/static/js/main.72199254.js",
+    "static/media/OrientalCatsLight-2OzB8.otf": "/image-gallery-react/static/media/OrientalCatsLight-2OzB8.f2f74680bc170d5b7723.otf",
+    "index.html": "/image-gallery-react/index.html",
+    "main.9d4edd9e.css.map": "/image-gallery-react/static/css/main.9d4edd9e.css.map",
+    "main.72199254.js.map": "/image-gallery-react/static/js/main.72199254.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d4edd9e.css",
+    "static/js/main.72199254.js"
+  ]
+}
