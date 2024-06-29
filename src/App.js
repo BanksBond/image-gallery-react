@@ -4,6 +4,9 @@ import CatLoader from "./components/CatLoader/CatLoader";
 import CatWalking from "./components/CatWalking/CatWalking";
 import ImageModal from "./components/ImageModal/ImageModal";
 
+import footerCat from "./images/footerCat.png";
+import catpaw from "./images/catpapaw.png";
+
 export default function App() {
   const [cats, setCats] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -91,12 +94,16 @@ export default function App() {
           <ButtonPage loadMore={loadMoreCats} isLoadingMore={isLoadingMore} />
         </>
       )}
-      <Footer />
+      {/* <img
+        id="luna"
+        src="https://static.tumblr.com/d28817b6396b3da7f3ef2820ec19cdd6/gvmp0tx/XRHn9rsgl/tumblr_static_8oed06bltkg8cc4sw0g40w88o.gif"
+      /> */}
       <ImageModal
         show={!!selectedImage}
         image={selectedImage}
         onClose={handleCloseModal}
       />
+      <Footer />
     </>
   );
 }
@@ -118,5 +125,13 @@ function ButtonPage({ loadMore, isLoadingMore }) {
 }
 
 function Footer() {
-  return <footer>bakhtyar bhai ne bnai hai</footer>;
+  return (
+    <footer className="footer ubuntu-regular">
+      <div className="image-container">
+        <img className="animate-image" src={footerCat} alt="CatFooter"></img>
+      </div>
+      <p>©2024 Copyright Bakhtyar Ansari | All Rights Reserved</p>
+      <img className="paw" src={catpaw} alt="catpaw"></img>
+    </footer>
+  );
 }

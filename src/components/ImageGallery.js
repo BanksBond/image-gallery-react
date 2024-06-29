@@ -39,7 +39,7 @@ function ImageCard({ image, index, onImageClick }) {
   return (
     <div
       onClick={() => onImageClick(image.url)}
-      className="image-card"
+      className="image-card image-vignette"
       key={index}
     >
       {console.log(image.breeds[0].name)}
@@ -54,15 +54,23 @@ function ImageCard({ image, index, onImageClick }) {
       <figcaption>
         <span className="info ubuntu-regular">
           <h3>{image.breeds[0].name}</h3>
+        </span>
+        <span className="info ubuntu-regular">
           <span>{image.breeds[0].origin}</span>
         </span>
-        <span
-          onClick={() => setLike(!like)}
-          className={`links ${like ? "linkLiked" : ""}`}
-        >
-          <i className="fa-solid fa-heart"></i>
-        </span>
       </figcaption>
+      <div className="heart-wrapper">
+        <i
+          className={`heart-icon ${
+            like ? "background-heart" : "far fa-heart"
+          } `}
+          onClick={(e) => {
+            e.stopPropagation();
+            setLike(!like);
+          }}
+          style={{ color: like ? "rgb(255, 0, 0)" : "" }}
+        ></i>
+      </div>
     </div>
   );
 }
